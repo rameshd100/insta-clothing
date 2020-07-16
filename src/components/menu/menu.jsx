@@ -13,6 +13,7 @@ class Menu extends Component {
           imageUrl: "https://mir-s3-cdn-cf.behance.net/project_modules/fs/d2fe4197876291.5ecf6e8acf32c.jpg",
           id: 1,
           size: "large",
+          linkUrl: "",
         },
 
         {
@@ -20,6 +21,7 @@ class Menu extends Component {
           imageUrl: "",
           id: 2,
           size: "large",
+          linkUrl: "",
         },
       ],
 
@@ -28,24 +30,28 @@ class Menu extends Component {
           title: "shirts",
           imageUrl: "",
           id: 3,
+          linkUrl: "",
         },
 
         {
           title: "pants",
           imageUrl: "",
           id: 4,
+          linkUrl: "",
         },
 
         {
           title: "jackets",
           imageUrl: "",
           id: 5,
+          linkUrl: "",
         },
 
         {
           title: "shoes",
           imageUrl: "",
           id: 6,
+          linkUrl: "",
         },
       ],
     };
@@ -55,10 +61,10 @@ class Menu extends Component {
     return (
       <div className="menu">
         {this.state.genderCards.map((genderCard) => {
-          return <Gender key={genderCard.id} title={genderCard.title} imageUrl={genderCard.imageUrl} />;
+          return <Gender key={genderCard.id} title={genderCard.title} imageUrl={genderCard.imageUrl} linkUrl={genderCard.linkUrl} />;
         })}
         {this.state.menuItemsSections.map((menuItemsSection) => {
-          return <MenuItems key={menuItemsSection.id} title={menuItemsSection.title} imageUrl={menuItemsSection.imageUrl} />;
+          return <MenuItems key={menuItemsSection.id} title={menuItemsSection.title} imageUrl={menuItemsSection.imageUrl} linkUrl={menuItemsSection.linkUrl} />;
         })}
       </div>
     );
